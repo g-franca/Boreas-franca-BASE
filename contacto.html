@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content= "Este es un sitio web de una empresa productora de productos acústicos a base de acero y PET.">
+    <meta name="keywords"  content="BOREAS, PANELES, ACUSTICA, ACUSTICOS, DESIGN, STUDIO, ARQUITECTURA">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="js/style.js"></script>
+	<style>
+		.my-form {
+			color: #305896;
+		}
+		.my-form .btn-default {
+			background-color: #305896;
+			color: #fff;
+			border-radius: 0;
+		}
+		.my-form .btn-default:hover {
+			background-color: #4498C6;
+			color: #fff;
+		}
+		.my-form .form-control {
+			border-radius: 0;
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			// Google Maps setup
+			var googlemap = new google.maps.Map(
+				document.getElementById('googlemap'),
+				{
+					center: new google.maps.LatLng(-31.425132126248037, -64.1913175044737),
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+			);
+		});
+	</script>
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>Boreas-Info</title>
+</head>
+
+<body>
+<!-- Encabezado con logo y menu -->
+	<header id="header">
+		<div class="logo">
+			<img class = "logoImage" src="image/logo.PNG">
+			<h1>Boreas Studio</h1>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="index.html">Inicio</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="galeria.html">Galeria <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="noticias.html">noticias</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">Contacto</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div><h2 class ="contactoTexto">Contact Us</h2></div>
+		<br />
+		<div class="row">
+			<div class="col-md-6">
+				<div id="googlemap" style="width:100%; height:350px;"></div>
+			</div>
+			<br />
+			<div class="col-md-6">
+				<form class="my-form">
+					<div class="form-group">
+						<label for="form-name">Nombre</label>
+						<input type="text" class="form-control" id="form-name" placeholder="Name" required>
+					</div>
+					<div class="form-group">
+						<label for="form-email">Email</label>
+						<input type="email" class="form-control" id="form-email" placeholder="Email Address" required>
+					</div>
+					<div class="form-group">
+						<label for="form-subject">Telefono</label>
+						<input type="number" class="form-control" id="form-subject" placeholder="Phone" required>
+					</div>
+
+					<div class="col-md-12 mt-3">
+						<label class="mb-3 mr-1" for="country">Pais: </label>
+
+						<input type="radio" class="btn-check" name="country" id="us" autocomplete="off" required>
+						<label class="btn btn-sm btn-outline-secondary" for="Estados Unidos">Estados Unidos</label>
+
+						<input type="radio" class="btn-check" name="country" id="ame" autocomplete="off" required>
+						<label class="btn btn-sm btn-outline-secondary" for="LatinoAmerica">LatinoAmerica</label>
+
+						<input type="radio" class="btn-check" name="country" id="other" autocomplete="off" required>
+						<label class="btn btn-sm btn-outline-secondary" for="Otro">Otro</label>
+					</div>
+
+					<select class="form-select mt-3" required>
+						<option selected disabled value="">Tipo de Consulta</option>
+						<option value="us">Ventas</option>
+						<option value="ame">Soporte</option>
+						<option value="other">Otro</option>
+					</select> <br>
+
+					<div class="form-group">
+						<label for="form-message">Texto:</label>
+						<textarea class="form-control" id="form-message" placeholder="Message" cols="20" rows="5"></textarea>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+						<label class="form-check-label">Confirmo toda la informacion proporcionada</label>
+					</div>
+					<button class="btn btn-secondary" type="submit">Contact Us</button>                
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p class="h7"	> Boreas es un MSP/ISO registrado de Ark, Inc. Georgia</p>
+					<p class="h7">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+				</div>
+				<hr>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</section>
+<!-- ./Footer -->
+</body>
+
+</html>

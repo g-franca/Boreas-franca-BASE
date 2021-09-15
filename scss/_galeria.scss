@@ -1,0 +1,55 @@
+/* Codigos para la pagina Galeria */
+#galeriaPage .galeriaTitulo {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 100;
+    font-size: 3rem;
+    color: #ff5100;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    }
+
+#galeriaPage .seccionImagenes {
+    width: 100%;
+    height: auto;
+    background-color: #228db8;
+    padding: 30px;
+    display: grid;
+    grid-template-areas: "item1 item2 item3" "item4 item5 item6";
+    grid-row-gap: 50px;
+}
+
+#galeriaPage .foto {
+    min-height: 200px;
+    width: 90%;
+    border: 2px solid #fff;
+}
+
+#galeriaPage #foto1 {
+    background-color: firebrick;
+}
+
+#galeriaPage #foto2 {
+    background-color: forestgreen;
+    background-image: url("C:Users­minÞsktop\boreas+Franca - Desafiosimagevapor.jpg");
+    background-size: cover;
+}
+
+#galeriaPage #foto3 {
+    background-color: dodgerblue;
+}
+
+#galeriaPage #foto4 {
+    background-color: cadetblue;
+    background-image: url(sonicbar.jpg);
+    background-size: cover;
+}
+
+#galeriaPage #foto5 {
+    background-color: coral;
+    background-image: url(img/img6.jpeg);
+    background-size: cover;
+}
+
+#galeriaPage #foto6 {
+    background-color: fuchsia;
+}
